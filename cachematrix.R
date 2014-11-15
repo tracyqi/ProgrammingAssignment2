@@ -8,14 +8,24 @@
 ## 4. getFunc
 makeCacheMatrix <- function(x = matrix()) 
 {
+  # initialize
   m<-NULL
+  
+  # set value
   set<-function(y){
     x<<-y
     m<<-NULL
   }
+  
+  # get value
   get<-function() x
+  
+  # set operation
   setFunction <- function(Op) m  <<- Op
+  
+  # get operation results
   getFunction <- function() m
+  
   list(set=set, 
        get=get,
        setFunc=setFunction,
